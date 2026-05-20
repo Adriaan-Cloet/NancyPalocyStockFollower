@@ -1,0 +1,35 @@
+﻿@model List<NancyPalocyStockFollower.Models.CongressTrade>
+
+<h1>Nancy Pelosi - Stock Trades</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Geen trades gevonden.</p>
+} else
+{
+    <p>@Model.Count trades gevonden.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Ticker</th>
+                <th>Type</th>
+                <th>Bedrag</th>
+                <th>Omschrijving</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trade in Model)
+            {
+                <tr>
+                    <td>@trade.TransactionDate</td>
+                    <td>@trade.Ticker</td>
+                    <td>@trade.Transaction</td>
+                    <td>@trade.Amount</td>
+                    <td>@trade.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

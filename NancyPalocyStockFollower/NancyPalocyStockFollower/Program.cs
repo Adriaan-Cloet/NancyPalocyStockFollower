@@ -1,7 +1,11 @@
+using NancyPalocyStockFollower.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<TradeService>();
+builder.Services.AddScoped<TradeService>();
 
 var app = builder.Build();
 
@@ -22,7 +26,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
+    pattern: "{controller=Trades}/{action=Index}/{id?}")
     .WithStaticAssets();
 
 

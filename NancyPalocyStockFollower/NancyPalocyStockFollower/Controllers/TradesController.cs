@@ -1,19 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using NancyPalocyStockFollower.Models;
+using NancyPalocyStockFollower.Services;
 using System.Diagnostics;
 
 namespace NancyPalocyStockFollower.Controllers
 {
-    public class HomeController : Controller
+    public class TradesController : Controller
     {
-        public IActionResult Index()
+        private readonly TradeService _tradeService;
+
+        public TradesController(TradeService tradeService)
         {
-            return View();
+            _tradeService = tradeService;
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var trades = await _tradeService.GetPelosiTradesAsync();
+            return View(trades);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
