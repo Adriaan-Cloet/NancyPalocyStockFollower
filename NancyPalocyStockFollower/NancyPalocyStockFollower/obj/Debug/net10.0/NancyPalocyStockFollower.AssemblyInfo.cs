@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NancyPalocyStockFollower")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99817c8a8a0552bbfbcad28c1eb92429e2640a95")]
 [assembly: System.Reflection.AssemblyProductAttribute("NancyPalocyStockFollower")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NancyPalocyStockFollower")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
