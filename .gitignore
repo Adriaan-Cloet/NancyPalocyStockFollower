@@ -1,0 +1,36 @@
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+ 
+## Build output
+[Bb]in/
+[Oo]bj/
+out/
+publish/
+ 
+## NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+packages/
+.nuget/
+ 
+## ASP.NET Core secrets (NOOIT pushen)
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+**/secrets.json
+ 
+## User-specific files
+*.rsuser
+ 
+## OS files
+.DS_Store
+Thumbs.db
+ 
+## Logs
+*.log
+logs/
